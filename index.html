@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torch Project</title>
+</head>
+<style>
+    body{
+        height: 825px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+    .on{
+        position: relative;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 10px;
+        margin: 60px;
+        height: 50px;
+        width: 97px;
+        right: 125px;
+        background-color: green;
+    }
+    .off{
+        position: relative;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 10px;
+        margin: 60px;
+        height: 50px;
+        width: 97px;
+        left: 104px;
+        bottom: 169px;
+        background-color: red;
+    }
+    #bulb{
+        height: 272px;
+        width: 198px;
+        
+    }
+    .a{
+        text-align: justify;
+    }
+    
+</style>
+<body>
+    <script>
+        function light(value){
+            var pic;
+            if(value == 0){
+
+                pic="https://tutorialspoint.dev/image/OFFbulb.jpg"
+            }
+            else{
+                pic="https://tutorialspoint.dev/image/ONbulb.jpg";
+            }
+            document.getElementById('bulb').src=pic;
+        }
+    </script>
+    <div>
+        <h1 class="a">Click to On/Off the bulb</h1>
+        <div>
+        <img id="bulb" src="https://tutorialspoint.dev/image/OFFbulb.jpg" alt="">
+        </div>
+        <div>
+            <button class="on" onclick="light(1)">Turn On</button>
+        </div>
+        <div> 
+        <button class="off" onclick="light(0)">Turn Off</button>
+        </div>
+    </div>
+
+</body>
+</html>
